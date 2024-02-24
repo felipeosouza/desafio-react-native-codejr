@@ -1,0 +1,64 @@
+{
+    "pecas": [
+        {
+            "id": 1,
+            "name": "PLACA DE VIDEO GALAX GEFORCE RTX 2060 PLUS, 1-CLICK OC, 12GB, GDDR6, DLSS, RAY TRACING",
+            "url": "https://i.zst.com.br/thumbs/12/7/36/805413340.jpg",
+            "price": "3980.90"
+        },
+        {
+            "id": 2,
+            "name": "AMD Ryzen 7 7800X3D 4.2 GHz 8-Core Processor",
+            "url": "https://cdna.pcpartpicker.com/static/forever/images/product/f0e0e59d75066ec825667b71c31e3c83.256p.jpg",
+            "price": "2119.00"
+        },
+        {
+            "id": 3,
+            "name": "Intel Core i5-12600K 3.7 GHz 10-Core Processor",
+            "url": "https://cdna.pcpartpicker.com/static/forever/images/product/3f727799b9fc5e83f0e8953759946bd2.256p.jpg",
+            "price": "1299.90"
+        },
+        {
+            "id": 4,
+            "name": "Asus ROG STRIX B650-A GAMING WIFI ATX AM5 Motherboard",
+            "url": "https://m.media-amazon.com/images/I/51W9XJLDRlL.jpg",
+            "price": "1230.94"
+        },
+        {
+            "id": 5,
+            "name": "Corsair Vengeance RGB 32 GB (2 x 16 GB) DDR5-6000 CL40 Memory",
+            "url": "https://cdna.pcpartpicker.com/static/forever/images/product/b2d107d629e656f9f435ce9bd604f7e0.1600.jpg",
+            "price": "740.99"
+        },
+        {
+            "id": 6,
+            "name": "ASRock Challenger D Radeon RX 6600 8 GB Video Card",
+            "url": "https://cdna.pcpartpicker.com/static/forever/images/product/c5489241c902a9ae06a42212e978f989.1600.jpg",
+            "price": "1499.99"
+        },
+        {
+            "id": 7,
+            "name": "Gigabyte EAGLE GeForce RTX 4060 Ti 8 GB Video Card",
+            "url": "https://cdna.pcpartpicker.com/static/forever/images/product/80f174eea93a4a0981c63721c9a9805d.1600.jpg",
+            "price": "5697.90"
+        },
+        {
+            "id": 8,
+            "name": "XFX GTR XXX Radeon RX 580 8 GB Video Card",
+            "url": "https://cdna.pcpartpicker.com/static/forever/images/product/7a8d66854d65f497aca573e84772d861.1600.jpg",
+            "price": "762.30"
+        },
+        {
+            "id": 9,
+            "name": "Seagate Barracuda Compute 2 TB 3.5 inches 7200 RPM Internal Hard Drive",
+            "url": "https://cdna.pcpartpicker.com/static/forever/images/product/c7b5b7dacbecdcdd0e073b761193eef6.1600.jpg",
+            "price": "449.99"
+        },
+        {
+            "id": 10,
+            "name": "Samsung 970 Evo Plus 1 TB M.2-2280 PCIe 3.0 X4 NVME Solid State Drive",
+            "url": "https://cdna.pcpartpicker.com/static/forever/images/product/326881d073c1b667bd348893696c690e.1600.jpg",
+            "price": "849.99"
+        }
+    ]
+}
