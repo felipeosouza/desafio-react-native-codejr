@@ -26,7 +26,7 @@ export default ({ navigation }) => {
         <ScrollView style={styles.homeScreen} contentContainerStyle={{ alignItems: 'center' }}>
             <View style={styles.welcome}>
                 <CustomText style={{ fontFamily: 'Khand-Bold', fontSize: height * 0.04 }}>{'Bem-vindo(a) à NSQ!'}</CustomText>
-                <CustomText style={{ width: '80%', fontSize: height * 0.025, textAlign: 'center' }}>Montando ou atualizando seu computador,
+                <CustomText style={{ width: '85%', fontSize: height * 0.025, textAlign: 'center' }}>Montando ou atualizando seu computador,
                     Todo o hardware que você precisa está aqui!</CustomText>
             </View>
             <Section title={'Mais vendidos'} />

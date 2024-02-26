@@ -87,7 +87,7 @@ export default forwardRef(({name, price, url}, ref) => {
                               initialX.current = el.nativeEvent.layout.x
                               currentX.value = initialX.current
                            }}>
-                <Shadow style={styles.shadowBox} startColor='#202020' offset={['3%', '8%']} distance={height*0.006} sides={{top: false, start: false}}>
+                <Shadow style={styles.shadowBox} startColor='#202020' offset={[height*0.002, height*0.003]} distance={height*0.006}>
                     <Image style={styles.productImage}
                         source={{uri: url}}
                     />
@@ -100,8 +100,6 @@ export default forwardRef(({name, price, url}, ref) => {
                                 source={require('../../assets/images/price_tag.png')}
                             />
                         </View>
-                        {/* <View style={styles.priceTagContainer}>
-                        </View> */}
                         <CustomText style = {{fontFamily: 'Khand-SemiBold', fontSize: height*0.02, marginHorizontal: '5%'}}>R$ {price}</CustomText>
                     </View>
                 </Shadow>

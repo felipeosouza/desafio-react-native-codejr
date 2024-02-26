@@ -43,7 +43,7 @@ export default ({ navigation, route }) => {
         }, [])
 
         const fetchData = async () => {
-            const fetchMembers = await fetch('http://192.168.2.105:3001/membros', {
+            const fetchMembers = await fetch('http://192.168.2.104:3001/membros', {
                 method: 'GET'
             })
             const data = await fetchMembers.json()
@@ -104,7 +104,7 @@ export default ({ navigation, route }) => {
                             initialNumToRender={10}
                         />
                         : <View style={[styles.centered, { height: '100%' }]}>
-                            <CustomText style={{ fontFamily: 'Khand-Bold', fontSize: height * 0.03 }}>Nenhum membro foi encontrado...</CustomText>
+                            <CustomText style={{ fontFamily: 'Khand-Bold', fontSize: height * 0.026 }}>Nenhum membro foi encontrado...</CustomText>
                         </View>
                 }
             </View>

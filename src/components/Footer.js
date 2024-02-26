@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     footerContainer: {
         backgroundColor: 'black',
         width: '100%',
-        aspectRatio: 1.8,
+        height: height * 0.3,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         aspectRatio: 1,
         marginBottom: '2%',
         resizeMode: 'contain',
-        margin: '3%'
+        margin: 5
     },
     redirectTexts: {
         color: 'white',

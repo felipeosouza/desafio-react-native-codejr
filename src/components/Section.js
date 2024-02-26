@@ -36,6 +36,7 @@ export default ({title}) => {
                 <CustomText style = {{fontFamily: 'Khand-Bold', fontSize: width*0.08, marginLeft: width*0.03}}>{title}</CustomText>
                 <View style={styles.carouselContainer}>
                     <ScrollView horizontal contentContainerStyle={styles.carousel}
+                                showsHorizontalScrollIndicator={false}
                                 ref={scrollViewRef}
                                 onScroll={(scrollInfo) => {
                                     cardRefs.current.forEach((el) => {

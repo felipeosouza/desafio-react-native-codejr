@@ -11,14 +11,11 @@ const styles = StyleSheet.create({
     },
     input: {
         color: 'white',
-        justifyContent: 'center',
-        alignItems: 'center',
         fontFamily: 'Khand-SemiBold',
         fontSize: height * 0.023,
         backgroundColor: '#292929',
         textAlign: 'center',
-        paddingVertical: '0.5%',
-        //paddingHorizontal: '0.01%',
+        paddingTop: '0.8%',
         borderRadius: 6
     }
 })

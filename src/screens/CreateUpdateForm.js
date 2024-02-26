@@ -58,7 +58,7 @@ export default ({navigation, route}) => {
     const createOrUpdate = async (member) => {
         const postMember = async (member) => {
             try {
-                await fetch(`http://192.168.2.105:3001/membros`, {
+                await fetch(`http://192.168.2.104:3001/membros`, {
                     method: 'POST',
                     headers: {
                         "Accept": "application/json",
@@ -77,7 +77,7 @@ export default ({navigation, route}) => {
 
         const deleteMember = async (member) => {
             try {
-                await fetch(`http://192.168.2.105:3001/membros/${member.id}`, {
+                await fetch(`http://192.168.2.104:3001/membros/${member.id}`, {
                     method: 'DELETE',
                 })
             } catch (error) {
@@ -91,19 +91,23 @@ export default ({navigation, route}) => {
 
 
         if(action == 'Create') {
-            if(Object.keys(member).length < 4)
+            if(Object.keys(member).length < 4){
                 await alert({
                     type: DropdownAlertType.Error,
                     title: 'Dados insuficientes',
                     message: 'Preencha todos os campos.',
                 });
-            else
+            }
+            else {
                 await postMember(member)
+                navigation.goBack()
+            }
         } else if(action == 'Update') {
+            console.log(member);
             await deleteMember(member)
             await postMember(member)
+            navigation.goBack()
         }
-        navigation.goBack()
     }
 
     return (
@@ -124,7 +128,7 @@ export default ({navigation, route}) => {
                     <DropShadowButton action={() => createOrUpdate(newMember.current)} fontSize={height*0.03}>{action == 'Create'? 'Criar' : 'Atualizar'}</DropShadowButton>
                 </View>
             </View>
-            <DropdownAlert alert={func => (alert = func)} />
+            <DropdownAlert alert={func => (alert = func)}/>
         </View>
     )
 }

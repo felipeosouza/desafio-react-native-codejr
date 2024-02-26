@@ -70,7 +70,7 @@ export default ({navigation, route}) => {
     
     const deleteUser = async () => {
         try {
-            await fetch(`http://192.168.2.105:3001/membros/${member.id}`, {
+            await fetch(`http://192.168.2.104:3001/membros/${member.id}`, {
                 method: 'DELETE'
             })
         } catch (error) {
@@ -114,7 +114,7 @@ export default ({navigation, route}) => {
                                     <CustomText style = {{fontFamily: 'Khand-SemiBold', fontSize: height*0.025}}>Aniversário: {member?.aniversario}</CustomText>
                                     <CustomText style = {{fontFamily: 'Khand-SemiBold', fontSize: height*0.025}}>Cargo: {member?.cargo}</CustomText>
                                 </>
-                            : <CustomText style = {{fontFamily: 'Khand-SemiBold', fontSize: height*0.026, textAlign: 'center', width: '80%'}}>Certeza que dejesa excluir o membro “{member?.name}”? Essa ação não poderá ser desfeita.</CustomText>
+                            : <CustomText style = {{fontFamily: 'Khand-SemiBold', fontSize: height*0.026, textAlign: 'center', width: '93%'}}>Certeza que dejesa excluir o membro “{member?.name}”? Essa ação não poderá ser desfeita.</CustomText>
                     }
                 </View>
                 <View style={[styles.buttonContainer]}>

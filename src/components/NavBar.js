@@ -1,13 +1,14 @@
 import React from 'react'
 import { Image, View, StyleSheet } from 'react-native'
 import Icon from './Icon'
+import { height } from '../modules/DimensionsModule'
 
 
 const styles = StyleSheet.create({
     navBarContainer: {
         backgroundColor: 'black',
         width: '100%',
-        aspectRatio: 3.7,
+        height: height * 0.13,
         justifyContent: 'center',
         alignItems: 'center'
     },
