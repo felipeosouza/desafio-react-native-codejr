@@ -15,6 +15,7 @@ import ManageMembers from './screens/ManageMembers';
 import CreateUpdateForm from './screens/CreateUpdateForm';
 import ReadDeleteCard from './screens/ReadDeleteCard';
 import ContactScreen from './screens/ContactScreen';
+import FooterLogin from './components/FooterLogin';
 
 
 function App() {
@@ -60,6 +61,10 @@ function App() {
           <Stack.Screen
             name='Contact'
             component={ContactScreen}
+          />
+          <Stack.Screen
+            name='FooterLogin'
+            component={FooterLogin}
           />
           <Stack.Screen
             name='CreateUpdateForm'

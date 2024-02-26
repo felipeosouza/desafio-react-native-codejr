@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 })
 
 
-export default () => {
+export default ({handleFooterLogin}) => {
     const dispatch = useContext(DispatchContext)
 
     const handleLogin = async () => {
@@ -48,16 +48,11 @@ export default () => {
     return (
         <View style = {[styles.loginScreen, styles.centered]}>
             <StatusBar backgroundColor='#292929' style='light'/>
-            {/* <View style={[{flex: 1}, styles.centered, {paddingTop: 0}]}>
-                <Image style={{height: '50%', resizeMode: 'contain'}}
-                    source={require('../../assets/images/logo.png')}
-                />
-            </View> */}
             <View style={[styles.loginCard]}>
                 <CustomText style = {{fontFamily: 'Khand-Bold', fontSize: height*0.04, textAlign: 'center'}}>Entre para gerenciar</CustomText>
                 <FormInput inputStyle={styles.inputStyle}>E-mail</FormInput>
                 <FormInput inputStyle={styles.inputStyle} visible={false}>Senha</FormInput>
-                <DropShadowButton action={handleLogin} fontSize={height*0.03}>Fazer login</DropShadowButton>
+                <DropShadowButton action={ !handleFooterLogin? handleLogin : handleFooterLogin } fontSize={height*0.03}>Fazer login</DropShadowButton>
             </View>
         </View>
     )

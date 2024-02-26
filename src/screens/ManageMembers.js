@@ -28,50 +28,51 @@ const styles = StyleSheet.create({
 
 export default ({ navigation, route }) => {
     const isLoggedIn = useContext(AppContext).isLoggedIn
-    //Aviso inútil
-    LogBox.ignoreLogs(['VirtualizedLists should never be nested'])
-
     //Saber se é apenas leitura ou gerenciável
     const isReadOnly = route.params?.readOnly || false
 
-    //Pegando os dados
-    const allMembers = useRef([]);
-    const [members, dispatch] = useReducer((state, params) => {
-        return params.newArray
-    }, [])
-
-    const fetchData = async () => {
-        const fetchMembers = await fetch('http://192.168.2.105:3001/membros', {
-            method: 'GET'
-        })
-        const data = await fetchMembers.json()
-        allMembers.current = data
-        dispatch({ newArray: data })
-    }
-
-    useFocusEffect(
-        useCallback(() => {
-            fetchData()
-        }, [])
-    )
-
-    //Função para abrir os modais
-    const openModal = (route, params) => {
-        //Abrir modal
-        navigation.navigate(route, params)
-    }
-
-    //Atualizar lista de membros
-    const filterMembers = (text, oldArray) => {
-        const newArray = oldArray.filter((el) => {
-            if (el.name.toLowerCase().indexOf(text.toLowerCase()) >= 0)
-                return true
-        })
-
-        dispatch({ newArray: newArray })
-    }
-
     const ManageMembers = () => {
+        //Aviso inútil
+        LogBox.ignoreLogs(['VirtualizedLists should never be nested'])
+
+
+        //Pegando os dados
+        const allMembers = useRef([]);
+        const [members, dispatch] = useReducer((state, params) => {
+            return params.newArray
+        }, [])
+
+        const fetchData = async () => {
+            const fetchMembers = await fetch('http://192.168.2.105:3001/membros', {
+                method: 'GET'
+            })
+            const data = await fetchMembers.json()
+            allMembers.current = data
+            dispatch({ newArray: data })
+        }
+
+        useFocusEffect(
+            useCallback(() => {
+                fetchData()
+            }, [])
+        )
+
+        //Função para abrir os modais
+        const openModal = (route, params) => {
+            //Abrir modal
+            navigation.navigate(route, params)
+        }
+
+        //Atualizar lista de membros
+        const filterMembers = (text, oldArray) => {
+            const newArray = oldArray.filter((el) => {
+                if (el.name.toLowerCase().indexOf(text.toLowerCase()) >= 0)
+                    return true
+            })
+
+            dispatch({ newArray: newArray })
+        }
+
         return <ScrollView style={{ height: '100%', backgroundColor: '#454545' }} contentContainerStyle={{ alignItems: 'center' }}>
             <View style={[styles.centered, { marginVertical: '3%' }]}>
                 {
@@ -87,11 +88,11 @@ export default ({ navigation, route }) => {
                             Novo Membro
                         </DropShadowButton>
                 }
-                <SearchBar handleTextChange={(text) => filterMembers(text, allMembers.current)} />
+                <SearchBar handleTextChange={(text) => filterMembers(text, allMembers.current)}/>
             </View>
             <View style={[{ height: height * 0.6, width: '80%' }]}>
                 {
-                    members.length >= 1 ?
+                    members.length > 0 ?
                         <FlatList
                             style={{ marginVertical: height * 0.04, paddingHorizontal: '1%' }}
                             data={members}

@@ -59,7 +59,11 @@ export default ({navigation}) => {
                 <Pressable onPress={() => navigate('ManageMembers', {readOnly: true})}>
                     <CustomText style={styles.redirectTexts}>Membros</CustomText>
                 </Pressable>
-                <Pressable onPress={() => dispatch({type: 'login', isLoggedIn: false})}>
+                <Pressable onPress={() => {
+                    dispatch({type: 'login', isLoggedIn: false})
+                    navigate('FooterLogin')
+                }
+                }>
                     <CustomText style={styles.redirectTexts}>Login</CustomText>
                 </Pressable>
             </View>
