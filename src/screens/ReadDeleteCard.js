@@ -70,7 +70,7 @@ export default ({navigation, route}) => {
     
     const deleteUser = async () => {
         try {
-            await fetch(`http://192.168.2.104:3001/membros/${member.id}`, {
+            await fetch(`seuip/membros/${member.id}`, {
                 method: 'DELETE'
             })
         } catch (error) {

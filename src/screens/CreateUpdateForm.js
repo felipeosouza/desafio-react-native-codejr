@@ -58,7 +58,7 @@ export default ({navigation, route}) => {
     const createOrUpdate = async (member) => {
         const postMember = async (member) => {
             try {
-                await fetch(`http://192.168.2.104:3001/membros`, {
+                await fetch(`seuip/membros`, {
                     method: 'POST',
                     headers: {
                         "Accept": "application/json",
@@ -77,7 +77,7 @@ export default ({navigation, route}) => {
 
         const deleteMember = async (member) => {
             try {
-                await fetch(`http://192.168.2.104:3001/membros/${member.id}`, {
+                await fetch(`seuip/membros/${member.id}`, {
                     method: 'DELETE',
                 })
             } catch (error) {

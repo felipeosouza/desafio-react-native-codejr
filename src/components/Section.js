@@ -30,6 +30,15 @@ export default ({title}) => {
     const cardRefs = useRef(new Array(6))
     const scrollViewRef = useRef()
     
+    const shuffle = (array) => { 
+        for (let i = array.length - 1; i > 0; i--) { 
+          const j = Math.floor(Math.random() * (i + 1)); 
+          [array[i], array[j]] = [array[j], array[i]]; 
+        } 
+        return array
+    }
+
+    const shuffledArray = shuffle(pecas)
 
     return (
         <View style = {styles.sectionContainer}>
@@ -46,22 +55,9 @@ export default ({title}) => {
                                 }
                                 >
                     {
-                        (() => {
-                            const shuffle = (array) => { 
-                                for (let i = array.length - 1; i > 0; i--) { 
-                                  const j = Math.floor(Math.random() * (i + 1)); 
-                                  [array[i], array[j]] = [array[j], array[i]]; 
-                                } 
-                                return array
-                            }
-
-                            const shuffledArray = shuffle(pecas)
-                            const mappedArray = shuffledArray.map((el, i) => {
+                        shuffledArray.map((el, i) => {
                                 return <Card name={el.name} price={el.price} url={el.url} key={i} ref={el => cardRefs.current[i] = el}/>
-                            })
-
-                            return mappedArray
-                        })()
+                        })
                     }
                     </ScrollView>
                 </View>

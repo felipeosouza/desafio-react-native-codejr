@@ -43,7 +43,7 @@ export default ({ navigation, route }) => {
         }, [])
 
         const fetchData = async () => {
-            const fetchMembers = await fetch('http://192.168.2.104:3001/membros', {
+            const fetchMembers = await fetch('seuip/membros', {
                 method: 'GET'
             })
             const data = await fetchMembers.json()
@@ -74,6 +74,11 @@ export default ({ navigation, route }) => {
         }
 
         return <ScrollView style={{ height: '100%', backgroundColor: '#454545' }} contentContainerStyle={{ alignItems: 'center' }}>
+            <View>
+                {
+                
+                }
+            </View>
             <View style={[styles.centered, { marginVertical: '3%' }]}>
                 {
                     isReadOnly ? null
