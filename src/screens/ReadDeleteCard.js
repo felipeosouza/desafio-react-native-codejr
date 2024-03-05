@@ -9,6 +9,9 @@ import DropdownAlert, { DropdownAlertData, DropdownAlertType } from 'react-nativ
 import DropShadowButton from '../components/DropShadowButton'
 import Icon from '../components/Icon'
 
+//Servidor
+import { servidor } from '../servidor.js'
+
 const styles = StyleSheet.create({
     centered: {
         alignItems: 'center',
@@ -70,7 +73,7 @@ export default ({navigation, route}) => {
     
     const deleteUser = async () => {
         try {
-            await fetch(`seuip/membros/${member.id}`, {
+            await fetch(`${servidor}/membros/${member.id}`, {
                 method: 'DELETE'
             })
         } catch (error) {

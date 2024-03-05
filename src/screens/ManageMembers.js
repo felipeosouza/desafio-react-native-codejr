@@ -12,6 +12,9 @@ import SearchBar from '../components/SearchBar'
 import Login from '../screens/Login'
 import { AppContext } from '../Context'
 
+//Servidor
+import { servidor } from '../servidor.js'
+
 const styles = StyleSheet.create({
     centered: {
         alignItems: 'center',
@@ -43,7 +46,7 @@ export default ({ navigation, route }) => {
         }, [])
 
         const fetchData = async () => {
-            const fetchMembers = await fetch('seuip/membros', {
+            const fetchMembers = await fetch(`${servidor}/membros`, {
                 method: 'GET'
             })
             const data = await fetchMembers.json()

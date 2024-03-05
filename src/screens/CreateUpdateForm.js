@@ -9,6 +9,9 @@ import DropShadowButton from '../components/DropShadowButton'
 import FormInput from '../components/FormInput'
 import Icon from '../components/Icon.js'
 
+//Servidor
+import { servidor } from '../servidor.js'
+
 const styles = StyleSheet.create({
     centered: {
         alignItems: 'center',
@@ -58,7 +61,7 @@ export default ({navigation, route}) => {
     const createOrUpdate = async (member) => {
         const postMember = async (member) => {
             try {
-                await fetch(`seuip/membros`, {
+                await fetch(`${servidor}/membros`, {
                     method: 'POST',
                     headers: {
                         "Accept": "application/json",
@@ -77,7 +80,7 @@ export default ({navigation, route}) => {
 
         const deleteMember = async (member) => {
             try {
-                await fetch(`seuip/membros/${member.id}`, {
+                await fetch(`${servidor}/membros/${member.id}`, {
                     method: 'DELETE',
                 })
             } catch (error) {
