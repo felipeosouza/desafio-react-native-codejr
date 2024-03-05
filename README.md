@@ -1,0 +1,1 @@
+Para testar o projeto, use a função do VSCode de pesquisar em pastas na pasta 'src', e substitua as instâncias de 'seuip' com o ip do seu computador, basta usar ipconfig no seu cmd e utilizar o ipv4 mostrado.
